@@ -7,6 +7,7 @@
 - [`GET` Get User by Username](#get-user-by-id)
 
 ### Create User
+Given a username, first name, and last name, create a new user.
 - Path: `/users`
 - Method: `PUT`
 - Body: 
@@ -33,6 +34,7 @@
 ```
 
 ### Get User by ID
+Given a valid user ID as an integer, return that user's information.
 - Path: `/users/id/:id`
 - Method: `GET`
 - Response:
@@ -51,6 +53,7 @@
 ```
 
 ### Get User by Username
+Given a valid username as a string, return that user's information.
 - Path: `/users/username/:username`
 - Method: `GET`
 - Response:
