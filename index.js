@@ -12,8 +12,11 @@ const port = process.env.PORT || 3000;
 
 /* Routes */
 
-const userRoutes = require('./api/routes/users');
-app.use('/users', userRoutes);
+const userPublicRoutes = require('./routes/users-public');
+const userPrivateRoutes = require('./routes/users-private');
+const userDebugRoutes = require('./routes/users-debug');
+
+app.use('/users', [userPublicRoutes, userPrivateRoutes, userDebugRoutes]);
 
 app.listen(port, () => {
     console.log('Server is listening on port ' + port);
